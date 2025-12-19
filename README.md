@@ -134,10 +134,10 @@ Dark mode implementation is placed inside `src/components/theme/theme.service.ts
 
 See more: https://www.spartan.ng/documentation/dark-mode
 
-Theme service implementation:
+Theme service implementation reference:
 https://github.com/spartan-ng/spartan/blob/main/apps/app/src/app/shared/theme.service.ts
 
-Toggle mode implementation:
+Toggle mode implementation reference:
 https://github.com/spartan-ng/spartan/blob/main/apps/app/src/app/shared/header/header-dark-mode.ts
 
 ## Import order in code
