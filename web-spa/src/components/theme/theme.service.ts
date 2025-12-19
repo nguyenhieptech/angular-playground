@@ -13,6 +13,7 @@ import {
 } from "@angular/core";
 import { injectLocalStorage } from "ngxtension/inject-local-storage";
 
+// See more: https://github.com/spartan-ng/spartan/blob/main/apps/app/src/app/shared/theme.service.ts
 const DarkModes = ["light", "dark", "system"] as const;
 export type DarkMode = (typeof DarkModes)[number];
 
