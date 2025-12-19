@@ -1,16 +1,19 @@
-import { Directive, computed, input } from '@angular/core';
-import { hlm } from '@/components/ui/utils';
-import type { ClassValue } from 'clsx';
+import { Directive, computed, input } from "@angular/core";
+import type { ClassValue } from "clsx";
+import { hlm } from "@/components/ui/utils";
 
 @Directive({
-	selector: '[hlmCardAction]',
-	host: {
-		'[class]': '_computedClass()',
-	},
+  selector: "[hlmCardAction]",
+  host: {
+    "[class]": "_computedClass()",
+  },
 })
 export class HlmCardAction {
-	public readonly userClass = input<ClassValue>('', { alias: 'class' });
-	protected readonly _computedClass = computed(() =>
-		hlm('col-start-2 row-span-2 row-start-1 self-start justify-self-end', this.userClass()),
-	);
+  public readonly userClass = input<ClassValue>("", { alias: "class" });
+  protected readonly _computedClass = computed(() =>
+    hlm(
+      "col-start-2 row-span-2 row-start-1 self-start justify-self-end",
+      this.userClass()
+    )
+  );
 }
