@@ -26,6 +26,7 @@
     "@spartan-ng/brain": "0.0.1-alpha.584",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "ngxtension": "^7.0.2",
     "rxjs": "~7.8.0",
     "tailwind-merge": "^3.3.1",
     "tslib": "^2.3.0"

@@ -13,6 +13,7 @@
     "target": "ES2022",
     "module": "preserve",
     "paths": {
+      "@/*": ["./src/*"],
       "@/components/ui/button": ["./src/components/ui/button/src/index.ts"],
       "@/components/ui/utils": ["./src/components/ui/utils/src/index.ts"],
       "@/components/ui/card": ["./src/components/ui/card/src/index.ts"],
