@@ -15,11 +15,15 @@
     "paths": {
       "@/*": ["./src/*"],
       "@/components/ui/button": ["./src/components/ui/button/src/index.ts"],
-      "@/components/ui/utils": ["./src/components/ui/utils/src/index.ts"],
       "@/components/ui/card": ["./src/components/ui/card/src/index.ts"],
       "@/components/ui/checkbox": ["./src/components/ui/checkbox/src/index.ts"],
+      "@/components/ui/dropdown-menu": ["./src/components/ui/dropdown-menu/src/index.ts"],
+      "@/components/ui/icon": ["./src/components/ui/icon/src/index.ts"],
       "@/components/ui/input": ["./src/components/ui/input/src/index.ts"],
-      "@/components/ui/icon": ["./src/components/ui/icon/src/index.ts"]
+      "@/components/ui/select": ["./src/components/ui/select/src/index.ts"],
+      "@/components/ui/table": ["./src/components/ui/table/src/index.ts"],
+      "@/components/ui/typography": ["./src/components/ui/typography/src/index.ts"],
+      "@/components/ui/utils": ["./src/components/ui/utils/src/index.ts"]
     }
   },
   "angularCompilerOptions": {

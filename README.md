@@ -1,7 +1,7 @@
 # Angular Playground
 
 <p align="center">
-  <img src="angular-icon.png" width="200" alt="Angular Icon" />
+  <img src="angular-icon.png" width="100" alt="Angular Icon" />
 </p>
 
 ## Installation
