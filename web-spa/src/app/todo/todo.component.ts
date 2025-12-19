@@ -10,7 +10,7 @@ import { TodoStore } from "./todo.store";
   standalone: true,
   imports: [HlmButtonImports, HlmCardImports, HlmCheckboxImports, HlmInputImports],
   template: `
-    <div class="bg-background flex min-h-screen items-center justify-center">
+    <div class="flex min-h-screen items-center justify-center bg-background">
       <section hlmCard class="w-full max-w-md">
         <!-- Header -->
         <header hlmCardHeader>
@@ -57,7 +57,7 @@ import { TodoStore } from "./todo.store";
         </div>
 
         <!-- Footer -->
-        <footer hlmCardFooter class="text-muted-foreground flex justify-between text-sm">
+        <footer hlmCardFooter class="flex justify-between text-sm text-muted-foreground">
           <span>Total: {{ store.todos().length }}</span>
           <span>Completed: {{ store.completed().length }}</span>
         </footer>
@@ -65,7 +65,7 @@ import { TodoStore } from "./todo.store";
     </div>
   `,
 })
-export class TodoComponent {
+export class Todo {
   store = new TodoStore();
 
   handleAdd(e: Event) {
