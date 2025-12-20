@@ -26,7 +26,7 @@ export class HlmDropdownMenuItem {
   public readonly userClass = input<ClassValue>("", { alias: "class" });
   protected readonly _computedClass = computed(() =>
     hlm(
-      "relative flex w-full cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none select-none hover:bg-accent focus:text-accent-foreground focus-visible:bg-accent data-[disabled]:pointer-events-none data-[disabled]:opacity-50 data-[inset]:pl-8 data-[variant=destructive]:text-destructive data-[variant=destructive]:focus:bg-destructive/10 data-[variant=destructive]:focus:text-destructive dark:data-[variant=destructive]:focus:bg-destructive/20 [&_ng-icon]:pointer-events-none [&_ng-icon]:shrink-0 [&_ng-icon:not([class*='text-'])]:text-muted-foreground [&_svg:not([class*='text-'])]:text-base data-[variant=destructive]:*:[ng-icon]:!text-destructive",
+      "relative flex w-full cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none select-none hover:bg-accent focus:text-accent-foreground focus-visible:bg-accent data-disabled:pointer-events-none data-disabled:opacity-50 data-inset:pl-8 data-[variant=destructive]:text-destructive data-[variant=destructive]:focus:bg-destructive/10 data-[variant=destructive]:focus:text-destructive dark:data-[variant=destructive]:focus:bg-destructive/20 [&_ng-icon]:pointer-events-none [&_ng-icon]:shrink-0 [&_ng-icon:not([class*='text-'])]:text-muted-foreground [&_svg:not([class*='text-'])]:text-base data-[variant=destructive]:*:[ng-icon]:text-destructive!",
       this.userClass()
     )
   );
