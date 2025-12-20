@@ -72,28 +72,28 @@ import { HlmSelectImports } from "@spartan-ng/helm/select";
 import { HlmTextareaImports } from "@spartan-ng/helm/textarea";
 ```
 
-Here we use `@/components/ui` import alias instead.
+Here we use `@/shared/ui` import alias instead.
 
 ```typescript
 // demo-default-import.component.ts
 import { Component } from "@angular/core";
 import { FormControl, ReactiveFormsModule, Validators } from "@angular/forms";
 import { BrnSelectImports } from "@spartan-ng/brain/select";
-// @/components/ui
-import { HlmButtonImports } from "@/components/ui/button";
-import { HlmCheckboxImports } from "@/components/ui/checkbox";
-import { HlmFieldImports } from "@/components/ui/field";
-import { HlmInputImports } from "@/components/ui/input";
-import { HlmSelectImports } from "@/components/ui/select";
-import { HlmTextareaImports } from "@/components/ui/textarea";
+// @/shared/ui
+import { HlmButtonImports } from "@/shared/ui/button";
+import { HlmCheckboxImports } from "@/shared/ui/checkbox";
+import { HlmFieldImports } from "@/shared/ui/field";
+import { HlmInputImports } from "@/shared/ui/input";
+import { HlmSelectImports } from "@/shared/ui/select";
+import { HlmTextareaImports } from "@/shared/ui/textarea";
 ```
 
 Config rules inside `components.json` are customizable and can be updated.
 
 ```json
 {
-  "componentsPath": "src/components/ui",
-  "importAlias": "@/components/ui"
+  "componentsPath": "src/app/shared/ui",
+  "importAlias": "@/shared/ui"
 }
 ```
 
@@ -106,22 +106,18 @@ If somehow you add code manually (copy-paste), make sure to add that specific im
 {
   "compilerOptions": {
     "paths": {
-      "@/components/ui/accordion": [
-        "./src/components/ui/accordion/src/index.ts"
+      "@/shared/ui/accordion": ["./src/app/shared/ui/accordion/src/index.ts"],
+      "@/shared/ui/autocomplete": [
+        "./src/app/shared/ui/autocomplete/src/index.ts"
       ],
-      "@/components/ui/autocomplete": [
-        "./src/components/ui/autocomplete/src/index.ts"
-      ],
-      "@/components/ui/button": ["./src/components/ui/button/src/index.ts"],
-      "@/components/ui/command": ["./src/components/ui/command/src/index.ts"],
-      "@/components/ui/field": ["./src/components/ui/field/src/index.ts"],
-      "@/components/ui/form-field": [
-        "./src/components/ui/form-field/src/index.ts"
-      ],
-      "@/components/ui/icon": ["./src/components/ui/icon/src/index.ts"],
-      "@/components/ui/input": ["./src/components/ui/input/src/index.ts"],
-      "@/components/ui/utils": ["./src/components/ui/utils/src/index.ts"],
-      "@/components/ui/popover": ["./src/components/ui/popover/src/index.ts"]
+      "@/shared/ui/button": ["./src/app/shared/ui/button/src/index.ts"],
+      "@/shared/ui/command": ["./src/app/shared/ui/command/src/index.ts"],
+      "@/shared/ui/field": ["./src/app/shared/ui/field/src/index.ts"],
+      "@/shared/ui/form-field": ["./src/app/shared/ui/form-field/src/index.ts"],
+      "@/shared/ui/icon": ["./src/app/shared/ui/icon/src/index.ts"],
+      "@/shared/ui/input": ["./src/app/shared/ui/input/src/index.ts"],
+      "@/shared/ui/utils": ["./src/app/shared/ui/utils/src/index.ts"],
+      "@/shared/ui/popover": ["./src/app/shared/ui/popover/src/index.ts"]
       // More components...
     }
   }
@@ -130,7 +126,7 @@ If somehow you add code manually (copy-paste), make sure to add that specific im
 
 ### Dark mode
 
-Dark mode implementation is placed inside `src/components/theme/theme.service.ts` and `src/components/header/header-dark-mode.ts`.
+Dark mode implementation is placed inside `src/app/shared/theme/theme.service.ts` and `src/app/shared/header/header-dark-mode.ts`.
 
 See more: https://www.spartan.ng/documentation/dark-mode
 
@@ -147,7 +143,7 @@ Import order defines in `.prettierrc`
 - Built-in node modules like `node:fs`
 - Modules from `@angular`
 - Third-party modules (e.g: `@tanstack/angular-table`, `@tanstack/angular-query-experimental`, etc.)
-- UI components (spartan/ui) `@/components/ui`
+- UI components (spartan/ui) `@/shared/ui`
 - Relative imports
 
 ```json

@@ -1,8 +1,8 @@
 import { Routes } from "@angular/router";
-import { DataTablePreview } from "./data-table-preview/data-table-preview.component";
-import { Todo } from "./todo/todo.component";
+import { DataTablePreviewPage } from "./features/data-table-preview/data-table-preview.page";
+import { TodoPage } from "./features/todo/todo.page";
 
 export const routes: Routes = [
-  { path: "todo", component: Todo },
-  { path: "data-table-preview", component: DataTablePreview },
+  { path: "todo", component: TodoPage },
+  { path: "data-table-preview", component: DataTablePreviewPage },
 ];
