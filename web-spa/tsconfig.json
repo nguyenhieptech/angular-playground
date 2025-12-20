@@ -13,17 +13,19 @@
     "target": "ES2022",
     "module": "preserve",
     "paths": {
-      "@/*": ["./src/*"],
-      "@/components/ui/button": ["./src/components/ui/button/src/index.ts"],
-      "@/components/ui/card": ["./src/components/ui/card/src/index.ts"],
-      "@/components/ui/checkbox": ["./src/components/ui/checkbox/src/index.ts"],
-      "@/components/ui/dropdown-menu": ["./src/components/ui/dropdown-menu/src/index.ts"],
-      "@/components/ui/icon": ["./src/components/ui/icon/src/index.ts"],
-      "@/components/ui/input": ["./src/components/ui/input/src/index.ts"],
-      "@/components/ui/select": ["./src/components/ui/select/src/index.ts"],
-      "@/components/ui/table": ["./src/components/ui/table/src/index.ts"],
-      "@/components/ui/typography": ["./src/components/ui/typography/src/index.ts"],
-      "@/components/ui/utils": ["./src/components/ui/utils/src/index.ts"]
+      "@/*": ["./src/app/*"],
+      "@/shared/ui/button": ["./src/app/shared/ui/button/src/index.ts"],
+      "@/shared/ui/card": ["./src/app/shared/ui/card/src/index.ts"],
+      "@/shared/ui/checkbox": ["./src/app/shared/ui/checkbox/src/index.ts"],
+      "@/shared/ui/dropdown-menu": ["./src/app/shared/ui/dropdown-menu/src/index.ts"],
+      "@/shared/ui/icon": ["./src/app/shared/ui/icon/src/index.ts"],
+      "@/shared/ui/input": ["./src/app/shared/ui/input/src/index.ts"],
+      "@/shared/ui/item": ["./src/app/shared/ui/item/src/index.ts"],
+      "@/shared/ui/select": ["./src/app/shared/ui/select/src/index.ts"],
+      "@/shared/ui/table": ["./src/app/shared/ui/table/src/index.ts"],
+      "@/shared/ui/typography": ["./src/app/shared/ui/typography/src/index.ts"],
+      "@/shared/ui/utils": ["./src/app/shared/ui/utils/src/index.ts"],
+      "@/shared/ui/separator": ["./src/app/shared/ui/separator/src/index.ts"]
     }
   },
   "angularCompilerOptions": {
