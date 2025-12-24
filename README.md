@@ -151,7 +151,8 @@ Import order defines in `.prettierrc`
   "<BUILTIN_MODULES>",
   "^@angular/(.*)$",
   "<THIRD_PARTY_MODULES>",
-  "^@/components.*",
+  "^@/shared/(.*)$",
+  "^@/(.*)$",
   "^./",
   "^../"
 ]
