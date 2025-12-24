@@ -1,8 +1,22 @@
 import { Routes } from "@angular/router";
-import { DataTablePreviewPage } from "./features/data-table-preview/data-table-preview.page";
-import { TodoPage } from "./features/todo/todo.page";
 
 export const routes: Routes = [
-  { path: "todo", component: TodoPage },
-  { path: "data-table-preview", component: DataTablePreviewPage },
+  {
+    path: "data-table-preview",
+    loadChildren: () =>
+      import("@/features/data-table-preview/data-table-preview.routes").then(
+        (m) => m.dataTablePreviewRoutes
+      ),
+  },
+  {
+    path: "field-preview",
+    loadChildren: () =>
+      import("@/features/field-preview/field-preview.routes").then(
+        (m) => m.fieldPreviewRoutes
+      ),
+  },
+  {
+    path: "todo",
+    loadChildren: () => import("@/features/todo/todo.routes").then((m) => m.todoRoutes),
+  },
 ];
