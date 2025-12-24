@@ -4,7 +4,7 @@ import type { ClassValue } from "clsx";
 import { hlm } from "@/shared/ui/utils";
 
 export const hlmSeparatorClass =
-  "bg-border inline-flex shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px";
+  "inline-flex shrink-0 bg-border data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px";
 
 @Directive({
   selector: "[hlmSeparator],hlm-separator",

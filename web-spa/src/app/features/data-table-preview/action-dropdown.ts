@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { NgIcon, provideIcons } from "@ng-icons/core";
 import { lucideEllipsis } from "@ng-icons/lucide";
-import { type CellContext, injectFlexRenderContext } from "@tanstack/angular-table";
+import { injectFlexRenderContext, type CellContext } from "@tanstack/angular-table";
 import { HlmButtonImports } from "@/shared/ui/button";
 import { HlmDropdownMenuImports } from "@/shared/ui/dropdown-menu";
 import { HlmIconImports } from "@/shared/ui/icon";

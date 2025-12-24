@@ -2,10 +2,7 @@ import { Component, signal } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { NgIcon, provideIcons } from "@ng-icons/core";
 import { lucideChevronDown } from "@ng-icons/lucide";
-import { BrnSelectImports } from "@spartan-ng/brain/select";
 import {
-  type ColumnDef,
-  type ColumnFiltersState,
   createAngularTable,
   flexRenderComponent,
   FlexRenderDirective,
@@ -13,6 +10,8 @@ import {
   getFilteredRowModel,
   getPaginationRowModel,
   getSortedRowModel,
+  type ColumnDef,
+  type ColumnFiltersState,
   type RowSelectionState,
   type SortingState,
   type VisibilityState,
@@ -38,16 +37,15 @@ export type Payment = {
 @Component({
   selector: "spartan-data-table-preview",
   imports: [
-    FlexRenderDirective,
-    FormsModule,
-    HlmDropdownMenuImports,
     HlmButtonImports,
-    NgIcon,
+    HlmDropdownMenuImports,
     HlmIconImports,
     HlmInputImports,
-    BrnSelectImports,
     HlmSelectImports,
     HlmTableImports,
+    FlexRenderDirective,
+    FormsModule,
+    NgIcon,
   ],
   providers: [provideIcons({ lucideChevronDown })],
   host: {

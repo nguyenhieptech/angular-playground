@@ -10,7 +10,7 @@ import { TodoStore } from "./todo.store";
   standalone: true,
   imports: [HlmButtonImports, HlmCardImports, HlmCheckboxImports, HlmInputImports],
   template: `
-    <div class="flex min-h-screen items-center justify-center bg-background">
+    <div class="mt-60 flex items-center justify-center bg-background px-4 md:px-0">
       <section hlmCard class="w-full max-w-md">
         <!-- Header -->
         <header hlmCardHeader>

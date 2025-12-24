@@ -1,7 +1,7 @@
 import { Component, computed, input } from "@angular/core";
 import { NgIcon, provideIcons } from "@ng-icons/core";
 import { lucideArrowUpDown } from "@ng-icons/lucide";
-import { type HeaderContext, injectFlexRenderContext } from "@tanstack/angular-table";
+import { injectFlexRenderContext, type HeaderContext } from "@tanstack/angular-table";
 import { HlmButtonImports } from "@/shared/ui/button";
 import { HlmIconImports } from "@/shared/ui/icon";
 

@@ -18,7 +18,7 @@ export class HlmSelectLabel {
   protected readonly _computedClass = computed(() =>
     hlm(
       "px-2 py-1.5 text-xs text-muted-foreground",
-      this._stickyLabels() ? "sticky top-0 z-[2] block bg-popover" : "",
+      this._stickyLabels() ? "sticky top-0 z-2 block bg-popover" : "",
       this.userClass()
     )
   );
