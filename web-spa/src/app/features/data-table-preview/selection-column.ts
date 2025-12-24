@@ -1,8 +1,8 @@
 import { Component } from "@angular/core";
 import {
+  injectFlexRenderContext,
   type CellContext,
   type HeaderContext,
-  injectFlexRenderContext,
 } from "@tanstack/angular-table";
 import { HlmCheckboxImports } from "@/shared/ui/checkbox";
 
