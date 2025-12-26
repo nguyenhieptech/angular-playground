@@ -1,11 +1,10 @@
-import { computed, Directive, input } from "@angular/core";
+import { Directive, input } from "@angular/core";
 import { cva, type VariantProps } from "class-variance-authority";
-import type { ClassValue } from "clsx";
-import { hlm } from "@/shared/ui/utils";
+import { classes } from "@/shared/ui/utils";
 import { injectHlmItemMediaConfig } from "./hlm-item-token";
 
 const itemMediaVariants = cva(
-  "flex shrink-0 items-center justify-center gap-2 group-has-data-[slot=item-description]/item:translate-y-0.5 group-has-data-[slot=item-description]/item:self-start [&_ng-icon]:pointer-events-none",
+  "flex shrink-0 items-center justify-center gap-2 group-has-[[data-slot=item-description]]/item:translate-y-0.5 group-has-[[data-slot=item-description]]/item:self-start [&_ng-icon]:pointer-events-none",
   {
     variants: {
       variant: {
@@ -27,16 +26,13 @@ export type ItemMediaVariants = VariantProps<typeof itemMediaVariants>;
   host: {
     "data-slot": "item-media",
     "[attr.data-variant]": "variant()",
-    "[class]": "_computedClass()",
   },
 })
 export class HlmItemMedia {
   private readonly _config = injectHlmItemMediaConfig();
-
-  public readonly userClass = input<ClassValue>("", { alias: "class" });
-
-  protected readonly _computedClass = computed(() =>
-    hlm(itemMediaVariants({ variant: this.variant() }), this.userClass())
-  );
   public readonly variant = input<ItemMediaVariants["variant"]>(this._config.variant);
+
+  constructor() {
+    classes(() => itemMediaVariants({ variant: this.variant() }));
+  }
 }

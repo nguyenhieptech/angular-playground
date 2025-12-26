@@ -1,8 +1,7 @@
 import { type BooleanInput } from "@angular/cdk/coercion";
 import { CdkMenuItemCheckbox } from "@angular/cdk/menu";
-import { Directive, booleanAttribute, computed, inject, input } from "@angular/core";
-import type { ClassValue } from "clsx";
-import { hlm } from "@/shared/ui/utils";
+import { Directive, booleanAttribute, inject, input } from "@angular/core";
+import { classes } from "@/shared/ui/utils";
 
 @Directive({
   selector: "[hlmDropdownMenuCheckbox]",
@@ -17,24 +16,21 @@ import { hlm } from "@/shared/ui/utils";
     "data-slot": "dropdown-menu-checkbox-item",
     "[attr.data-disabled]": 'disabled() ? "" : null',
     "[attr.data-checked]": 'checked() ? "" : null',
-    "[class]": "_computedClass()",
   },
 })
 export class HlmDropdownMenuCheckbox {
   private readonly _cdkMenuItem = inject(CdkMenuItemCheckbox);
-
-  public readonly userClass = input<ClassValue>("", { alias: "class" });
-  protected readonly _computedClass = computed(() =>
-    hlm(
-      "group relative flex w-full cursor-default items-center rounded-sm py-1.5 pr-2 pl-8 text-sm transition-colors outline-none select-none hover:bg-accent hover:text-accent-foreground focus-visible:bg-accent focus-visible:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50",
-      this.userClass()
-    )
-  );
-
   public readonly checked = input<boolean, BooleanInput>(this._cdkMenuItem.checked, {
     transform: booleanAttribute,
   });
   public readonly disabled = input<boolean, BooleanInput>(this._cdkMenuItem.disabled, {
     transform: booleanAttribute,
   });
+
+  constructor() {
+    classes(
+      () =>
+        "group relative flex w-full cursor-default items-center rounded-sm py-1.5 pr-2 pl-8 text-sm transition-colors outline-none select-none hover:bg-accent hover:text-accent-foreground focus-visible:bg-accent focus-visible:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+    );
+  }
 }
