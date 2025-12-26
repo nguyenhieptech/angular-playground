@@ -25,8 +25,12 @@
       "@/shared/ui/label": ["./src/app/shared/ui/label/src/index.ts"],
       "@/shared/ui/select": ["./src/app/shared/ui/select/src/index.ts"],
       "@/shared/ui/separator": ["./src/app/shared/ui/separator/src/index.ts"],
+      "@/shared/ui/sheet": ["./src/app/shared/ui/sheet/src/index.ts"],
+      "@/shared/ui/sidebar": ["./src/app/shared/ui/sidebar/src/index.ts"],
+      "@/shared/ui/skeleton": ["./src/app/shared/ui/skeleton/src/index.ts"],
       "@/shared/ui/table": ["./src/app/shared/ui/table/src/index.ts"],
       "@/shared/ui/typography": ["./src/app/shared/ui/typography/src/index.ts"],
+      "@/shared/ui/tooltip": ["./src/app/shared/ui/tooltip/src/index.ts"],
       "@/shared/ui/textarea": ["./src/app/shared/ui/textarea/src/index.ts"],
       "@/shared/ui/utils": ["./src/app/shared/ui/utils/src/index.ts"]
     }
