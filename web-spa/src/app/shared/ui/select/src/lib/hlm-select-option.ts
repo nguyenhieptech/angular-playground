@@ -1,16 +1,9 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  computed,
-  inject,
-  input,
-} from "@angular/core";
+import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
 import { NgIcon, provideIcons } from "@ng-icons/core";
 import { lucideCheck } from "@ng-icons/lucide";
 import { BrnSelectOption } from "@spartan-ng/brain/select";
-import type { ClassValue } from "clsx";
 import { HlmIcon } from "@/shared/ui/icon";
-import { hlm } from "@/shared/ui/utils";
+import { classes } from "@/shared/ui/utils";
 
 @Component({
   selector: "hlm-option",
@@ -18,9 +11,6 @@ import { hlm } from "@/shared/ui/utils";
   providers: [provideIcons({ lucideCheck })],
   changeDetection: ChangeDetectionStrategy.OnPush,
   hostDirectives: [{ directive: BrnSelectOption, inputs: ["disabled", "value"] }],
-  host: {
-    "[class]": "_computedClass()",
-  },
   template: `
     <span class="absolute right-2 flex size-3.5 items-center justify-center">
       @if (this._brnSelectOption.selected()) {
@@ -33,11 +23,10 @@ import { hlm } from "@/shared/ui/utils";
 })
 export class HlmSelectOption {
   protected readonly _brnSelectOption = inject(BrnSelectOption, { host: true });
-  public readonly userClass = input<ClassValue>("", { alias: "class" });
-  protected readonly _computedClass = computed(() =>
-    hlm(
-      `relative flex w-full cursor-default items-center gap-2 rounded-sm py-1.5 pr-8 pl-2 text-sm outline-none select-none data-active:bg-accent data-active:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 [&>ng-icon]:pointer-events-none [&>ng-icon]:size-4 [&>ng-icon]:shrink-0 [&>ng-icon:not([class*='text-'])]:text-muted-foreground`,
-      this.userClass()
-    )
-  );
+  constructor() {
+    classes(
+      () =>
+        `relative flex w-full cursor-default items-center gap-2 rounded-sm py-1.5 pr-8 pl-2 text-sm outline-none select-none data-active:bg-accent data-active:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2 [&>ng-icon]:pointer-events-none [&>ng-icon]:size-4 [&>ng-icon]:shrink-0 [&>ng-icon:not([class*='text-'])]:text-muted-foreground`
+    );
+  }
 }

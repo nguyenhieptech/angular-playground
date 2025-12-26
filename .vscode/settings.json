@@ -13,10 +13,11 @@
   "typescript.referencesCodeLens.enabled": true,
   "tailwindCSS.suggestions": true,
   // https://cva.style/docs/getting-started/installation#intellisense
-  "tailwindCSS.classFunctions": ["cva", "cx", "hlm"],
+  "tailwindCSS.classFunctions": ["cva", "cx", "hlm", "classes"],
   "tailwindCSS.classAttributes": [
     // Default
-    "class"
+    "class",
+    "classes"
   ],
   "tailwindCSS.experimental.classRegex": [
     ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],

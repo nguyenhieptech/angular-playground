@@ -1,8 +1,7 @@
 import { CdkMenu } from "@angular/cdk/menu";
-import { computed, Directive, inject, input, signal } from "@angular/core";
+import { Directive, inject, signal } from "@angular/core";
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
-import type { ClassValue } from "clsx";
-import { hlm } from "@/shared/ui/utils";
+import { classes } from "@/shared/ui/utils";
 
 @Directive({
   selector: "[hlmDropdownMenuSub],hlm-dropdown-menu-sub",
@@ -11,7 +10,6 @@ import { hlm } from "@/shared/ui/utils";
     "data-slot": "dropdown-menu-sub",
     "[attr.data-state]": "_state()",
     "[attr.data-side]": "_side()",
-    "[class]": "_computedClass()",
   },
 })
 export class HlmDropdownMenuSub {
@@ -20,14 +18,6 @@ export class HlmDropdownMenuSub {
   protected readonly _state = signal("open");
   protected readonly _side = signal("top");
 
-  public readonly userClass = input<ClassValue>("", { alias: "class" });
-  protected readonly _computedClass = computed(() =>
-    hlm(
-      "z-50 min-w-32 origin-top overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-lg data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95",
-      this.userClass()
-    )
-  );
-
   constructor() {
     this.setSideWithDarkMagic();
     // this is a best effort, but does not seem to work currently
@@ -35,6 +25,11 @@ export class HlmDropdownMenuSub {
     this._host.closed
       .pipe(takeUntilDestroyed())
       .subscribe(() => this._state.set("closed"));
+
+    classes(
+      () =>
+        "z-50 min-w-[8rem] origin-top overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-lg data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95"
+    );
   }
 
   private setSideWithDarkMagic() {

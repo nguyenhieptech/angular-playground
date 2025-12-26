@@ -1,18 +1,13 @@
-import { Directive, computed, input } from "@angular/core";
-import type { ClassValue } from "clsx";
-import { hlm } from "@/shared/ui/utils";
+import { Directive } from "@angular/core";
+import { classes } from "@/shared/ui/utils";
 
-export const hlmBlockquote = "mt-6 border-border border-l-2 pl-6 italic";
+export const hlmBlockquote = "mt-6 border-l-2 border-border pl-6 italic";
 
 @Directive({
   selector: "[hlmBlockquote]",
-  host: {
-    "[class]": "_computedClass()",
-  },
 })
 export class HlmBlockquote {
-  public readonly userClass = input<ClassValue>("", { alias: "class" });
-  protected readonly _computedClass = computed(() =>
-    hlm(hlmBlockquote, this.userClass())
-  );
+  constructor() {
+    classes(() => hlmBlockquote);
+  }
 }
