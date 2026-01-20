@@ -8,7 +8,7 @@ import { classes } from "@/shared/ui/utils";
 import { HlmDialogClose } from "./hlm-dialog-close";
 
 @Component({
-  selector: "hlm-dialog-content",
+  selector: "[hlmDialogContent],hlm-dialog-content",
   imports: [NgComponentOutlet, HlmDialogClose, HlmIconImports],
   providers: [provideIcons({ lucideX })],
   changeDetection: ChangeDetectionStrategy.OnPush,

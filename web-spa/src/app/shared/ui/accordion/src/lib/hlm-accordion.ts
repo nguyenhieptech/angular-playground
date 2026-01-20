@@ -3,7 +3,7 @@ import { BrnAccordion } from "@spartan-ng/brain/accordion";
 import { classes } from "@/shared/ui/utils";
 
 @Directive({
-  selector: "[hlmAccordion], hlm-accordion",
+  selector: "[hlmAccordion],hlm-accordion",
   hostDirectives: [{ directive: BrnAccordion, inputs: ["type", "dir", "orientation"] }],
 })
 export class HlmAccordion {

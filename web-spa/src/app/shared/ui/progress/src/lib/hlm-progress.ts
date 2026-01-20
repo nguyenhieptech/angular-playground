@@ -3,7 +3,7 @@ import { BrnProgress } from "@spartan-ng/brain/progress";
 import { classes } from "@/shared/ui/utils";
 
 @Directive({
-  selector: "hlm-progress,[hlmProgress]",
+  selector: "[hlmProgress],hlm-progress",
   hostDirectives: [{ directive: BrnProgress, inputs: ["value", "max", "getValueLabel"] }],
 })
 export class HlmProgress {

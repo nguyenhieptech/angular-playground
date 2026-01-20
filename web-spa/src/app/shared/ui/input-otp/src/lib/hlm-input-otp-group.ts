@@ -2,7 +2,7 @@ import { Directive } from "@angular/core";
 import { classes } from "@/shared/ui/utils";
 
 @Directive({
-  selector: "[hlmInputOtpGroup]",
+  selector: "[hlmInputOtpGroup],hlm-input-otp-group",
   host: {
     "data-slot": "input-otp-group",
   },

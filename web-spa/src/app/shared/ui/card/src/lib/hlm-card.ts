@@ -12,7 +12,7 @@ export const cardVariants = cva(
 export type CardVariants = VariantProps<typeof cardVariants>;
 
 @Directive({
-  selector: "[hlmCard]",
+  selector: "[hlmCard],hlm-card",
 })
 export class HlmCard {
   constructor() {

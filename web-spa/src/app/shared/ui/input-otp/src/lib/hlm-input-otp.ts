@@ -2,7 +2,7 @@ import { Directive } from "@angular/core";
 import { classes } from "@/shared/ui/utils";
 
 @Directive({
-  selector: "brn-input-otp[hlmInputOtp], brn-input-otp[hlm]",
+  selector: "brn-input-otp[hlmInputOtp],brn-input-otp[hlm]",
   host: {
     "data-slot": "input-otp",
   },

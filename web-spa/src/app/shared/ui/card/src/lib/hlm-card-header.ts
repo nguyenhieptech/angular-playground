@@ -2,7 +2,7 @@ import { Directive } from "@angular/core";
 import { classes } from "@/shared/ui/utils";
 
 @Directive({
-  selector: "[hlmCardHeader]",
+  selector: "[hlmCardHeader],hlm-card-header",
 })
 export class HlmCardHeader {
   constructor() {

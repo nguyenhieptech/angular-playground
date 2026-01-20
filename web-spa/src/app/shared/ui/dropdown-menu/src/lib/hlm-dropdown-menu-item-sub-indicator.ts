@@ -4,7 +4,7 @@ import { lucideChevronRight } from "@ng-icons/lucide";
 import { classes } from "@/shared/ui/utils";
 
 @Component({
-  selector: "hlm-dropdown-menu-item-sub-indicator",
+  selector: "[hlmDropdownMenuItemSubIndicator],hlm-dropdown-menu-item-sub-indicator",
   imports: [NgIcon],
   providers: [provideIcons({ lucideChevronRight })],
   changeDetection: ChangeDetectionStrategy.OnPush,

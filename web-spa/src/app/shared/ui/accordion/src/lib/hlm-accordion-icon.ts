@@ -5,7 +5,7 @@ import { provideHlmIconConfig } from "@/shared/ui/icon";
 import { classes } from "@/shared/ui/utils";
 
 @Directive({
-  selector: "ng-icon[hlmAccordionIcon], ng-icon[hlmAccIcon]",
+  selector: "ng-icon[hlmAccordionIcon],ng-icon[hlmAccIcon]",
   providers: [provideIcons({ lucideChevronDown }), provideHlmIconConfig({ size: "sm" })],
 })
 export class HlmAccordionIcon {

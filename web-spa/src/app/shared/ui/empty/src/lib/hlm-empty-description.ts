@@ -2,7 +2,7 @@ import { Directive } from "@angular/core";
 import { classes } from "@/shared/ui/utils";
 
 @Directive({
-  selector: "[hlmEmptyDescription]",
+  selector: "[hlmEmptyDescription],hlm-empty-description",
   host: {
     "data-slot": "empty-description",
   },

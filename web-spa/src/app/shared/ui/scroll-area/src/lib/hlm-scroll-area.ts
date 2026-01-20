@@ -2,7 +2,7 @@ import { Directive } from "@angular/core";
 import { classes } from "@/shared/ui/utils";
 
 @Directive({
-  selector: "ng-scrollbar[hlm],ng-scrollbar[hlmScrollbar]",
+  selector: "ng-scrollbar[hlm],ng-scrollbar[hlmScrollbar],hlm-scroll-area",
   host: {
     "data-slot": "scroll-area",
     "[style.--scrollbar-border-radius]": '100 + "px"',

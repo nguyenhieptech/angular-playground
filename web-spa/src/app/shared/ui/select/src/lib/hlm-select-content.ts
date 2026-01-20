@@ -7,7 +7,7 @@ import {
 import { classes } from "@/shared/ui/utils";
 
 @Directive({
-  selector: "[hlmSelectContent], hlm-select-content",
+  selector: "[hlmSelectContent],hlm-select-content",
   host: {
     "[attr.data-state]": '_stateProvider?.state() ?? "open"',
     "[attr.data-side]": '_sideProvider?.side() ?? "bottom"',

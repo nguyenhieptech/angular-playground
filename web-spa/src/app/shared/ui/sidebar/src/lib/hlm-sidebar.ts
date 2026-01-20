@@ -15,7 +15,7 @@ import { HlmSidebarService, type SidebarVariant } from "./hlm-sidebar.service";
 import { injectHlmSidebarConfig } from "./hlm-sidebar.token";
 
 @Component({
-  selector: "hlm-sidebar",
+  selector: "[hlmSidebar],hlm-sidebar",
   imports: [NgTemplateOutlet, HlmSheetImports, BrnSheetImports],
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {

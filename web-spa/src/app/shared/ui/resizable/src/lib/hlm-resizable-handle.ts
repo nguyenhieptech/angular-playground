@@ -6,7 +6,7 @@ import { HlmIcon } from "@/shared/ui/icon";
 import { classes } from "@/shared/ui/utils";
 
 @Component({
-  selector: "hlm-resizable-handle",
+  selector: "[hlmResizableHandle],hlm-resizable-handle",
   exportAs: "hlmResizableHandle",
   imports: [NgIcon, HlmIcon],
   providers: [provideIcons({ lucideGripVertical })],

@@ -3,7 +3,7 @@ import { BrnDialogDescription } from "@spartan-ng/brain/dialog";
 import { classes } from "@/shared/ui/utils";
 
 @Directive({
-  selector: "[hlmDialogDescription]",
+  selector: "[hlmDialogDescription],hlm-dialog-description",
   hostDirectives: [BrnDialogDescription],
   host: {
     "data-slot": "dialog-description",

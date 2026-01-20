@@ -2,7 +2,8 @@ import { Directive } from "@angular/core";
 import { classes } from "@/shared/ui/utils";
 
 @Directive({
-  selector: "div[hlmSidebarGroupLabel], button[hlmSidebarGroupLabel]",
+  selector:
+    "div[hlmSidebarGroupLabel],button[hlmSidebarGroupLabel],hlm-sidebar-group-label",
   host: {
     "data-slot": "sidebar-group-label",
     "data-sidebar": "group-label",

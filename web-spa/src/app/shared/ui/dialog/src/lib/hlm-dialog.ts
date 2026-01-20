@@ -3,7 +3,7 @@ import { BrnDialog, provideBrnDialogDefaultOptions } from "@spartan-ng/brain/dia
 import { HlmDialogOverlay } from "./hlm-dialog-overlay";
 
 @Component({
-  selector: "hlm-dialog",
+  selector: "[hlmDialog],hlm-dialog",
   exportAs: "hlmDialog",
   imports: [HlmDialogOverlay],
   providers: [

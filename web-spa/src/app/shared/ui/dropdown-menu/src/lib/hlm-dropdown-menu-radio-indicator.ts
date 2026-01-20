@@ -4,7 +4,7 @@ import { lucideCircle } from "@ng-icons/lucide";
 import { classes } from "@/shared/ui/utils";
 
 @Component({
-  selector: "hlm-dropdown-menu-radio-indicator",
+  selector: "[hlmDropdownMenuRadioIndicator],hlm-dropdown-menu-radio-indicator",
   imports: [NgIcon],
   providers: [provideIcons({ lucideCircle })],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -16,7 +16,7 @@ export class HlmDropdownMenuRadioIndicator {
   constructor() {
     classes(
       () =>
-        "pointer-events-none absolute left-2 flex size-3.5 items-center justify-center opacity-0 group-data-[checked]:opacity-100"
+        "pointer-events-none absolute left-2 flex size-3.5 items-center justify-center opacity-0 group-data-checked:opacity-100"
     );
   }
 }
