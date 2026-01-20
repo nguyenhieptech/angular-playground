@@ -3,7 +3,7 @@ import type { ClassValue } from "clsx";
 import { hlm } from "@/shared/ui/utils";
 
 @Component({
-  selector: "hlm-field-error",
+  selector: "[hlmFieldError],hlm-field-error",
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div role="alert" data-slot="field-error" [class]="_computedClass()">

@@ -26,7 +26,7 @@ export const HLM_CHECKBOX_VALUE_ACCESSOR = {
 };
 
 @Component({
-  selector: "hlm-checkbox",
+  selector: "[hlmCheckbox],hlm-checkbox",
   imports: [BrnCheckbox, NgIcon, HlmIcon],
   providers: [HLM_CHECKBOX_VALUE_ACCESSOR],
   viewProviders: [provideIcons({ lucideCheck })],

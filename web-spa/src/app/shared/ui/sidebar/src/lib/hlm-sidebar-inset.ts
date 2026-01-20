@@ -2,7 +2,7 @@ import { Directive } from "@angular/core";
 import { classes } from "@/shared/ui/utils";
 
 @Directive({
-  selector: "main[hlmSidebarInset]",
+  selector: "main[hlmSidebarInset],hlm-sidebar-inset",
   host: {
     "data-slot": "sidebar-inset",
   },

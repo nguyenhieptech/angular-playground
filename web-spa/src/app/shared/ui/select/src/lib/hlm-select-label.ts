@@ -4,7 +4,7 @@ import { classes } from "@/shared/ui/utils";
 import { HlmSelectContent } from "./hlm-select-content";
 
 @Directive({
-  selector: "[hlmSelectLabel], hlm-select-label",
+  selector: "[hlmSelectLabel],hlm-select-label",
   hostDirectives: [BrnSelectLabel],
 })
 export class HlmSelectLabel {

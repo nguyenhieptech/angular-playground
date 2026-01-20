@@ -9,7 +9,7 @@ import {
 import { injectHlmDropdownMenuConfig } from "./hlm-dropdown-menu-token";
 
 @Directive({
-  selector: "[hlmDropdownMenuTrigger]",
+  selector: "[hlmDropdownMenuTrigger],hlm-dropdown-menu-trigger",
   hostDirectives: [
     {
       directive: CdkMenuTrigger,

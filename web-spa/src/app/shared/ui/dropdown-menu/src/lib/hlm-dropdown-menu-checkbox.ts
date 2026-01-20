@@ -4,7 +4,7 @@ import { Directive, booleanAttribute, inject, input } from "@angular/core";
 import { classes } from "@/shared/ui/utils";
 
 @Directive({
-  selector: "[hlmDropdownMenuCheckbox]",
+  selector: "[hlmDropdownMenuCheckbox],hlm-dropdown-menu-checkbox",
   hostDirectives: [
     {
       directive: CdkMenuItemCheckbox,

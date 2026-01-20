@@ -4,7 +4,7 @@ import { Directive, booleanAttribute, inject, input } from "@angular/core";
 import { classes } from "@/shared/ui/utils";
 
 @Directive({
-  selector: "[hlmDropdownMenuRadio]",
+  selector: "[hlmDropdownMenuRadio],hlm-dropdown-menu-radio",
   hostDirectives: [
     {
       directive: CdkMenuItemRadio,
@@ -30,7 +30,7 @@ export class HlmDropdownMenuRadio {
   constructor() {
     classes(
       () =>
-        "group relative flex w-full cursor-default items-center rounded-sm py-1.5 pr-2 pl-8 text-sm transition-colors outline-none select-none hover:bg-accent hover:text-accent-foreground focus-visible:bg-accent focus-visible:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+        "group relative flex w-full cursor-default items-center rounded-sm py-1.5 pr-2 pl-8 text-sm transition-colors outline-none select-none hover:bg-accent hover:text-accent-foreground focus-visible:bg-accent focus-visible:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50"
     );
   }
 }

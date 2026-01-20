@@ -4,7 +4,7 @@ import { lucideCheck } from "@ng-icons/lucide";
 import { classes } from "@/shared/ui/utils";
 
 @Component({
-  selector: "hlm-dropdown-menu-checkbox-indicator",
+  selector: "[hlmDropdownMenuCheckboxIndicator],hlm-dropdown-menu-checkbox-indicator",
   imports: [NgIcon],
   providers: [provideIcons({ lucideCheck })],
   changeDetection: ChangeDetectionStrategy.OnPush,

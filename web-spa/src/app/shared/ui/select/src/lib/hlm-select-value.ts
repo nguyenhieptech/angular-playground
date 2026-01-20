@@ -2,7 +2,7 @@ import { Directive } from "@angular/core";
 import { classes } from "@/shared/ui/utils";
 
 @Directive({
-  selector: "hlm-select-value,[hlmSelectValue], brn-select-value[hlm]",
+  selector: "[hlmSelectValue],hlm-select-value,brn-select-value[hlm]",
 })
 export class HlmSelectValue {
   constructor() {

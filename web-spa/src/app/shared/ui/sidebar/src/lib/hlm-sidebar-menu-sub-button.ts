@@ -3,7 +3,7 @@ import { booleanAttribute, Directive, input } from "@angular/core";
 import { classes } from "@/shared/ui/utils";
 
 @Directive({
-  selector: "a[hlmSidebarMenuSubButton], button[hlmSidebarMenuSubButton]",
+  selector: "a[hlmSidebarMenuSubButton],button[hlmSidebarMenuSubButton]",
   host: {
     "data-slot": "sidebar-menu-sub-button",
     "data-sidebar": "menu-sub-button",

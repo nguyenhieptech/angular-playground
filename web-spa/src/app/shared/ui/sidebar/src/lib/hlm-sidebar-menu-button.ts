@@ -32,7 +32,7 @@ const sidebarMenuButtonVariants = cva(
 );
 
 @Directive({
-  selector: "button[hlmSidebarMenuButton], a[hlmSidebarMenuButton]",
+  selector: "button[hlmSidebarMenuButton],a[hlmSidebarMenuButton]",
   providers: [
     provideBrnTooltipDefaultOptions({
       showDelay: 150,

@@ -2,7 +2,7 @@ import { Directive } from "@angular/core";
 import { classes } from "@/shared/ui/utils";
 
 @Directive({
-  selector: "[hlmCardAction]",
+  selector: "[hlmCardAction],hlm-card-action",
 })
 export class HlmCardAction {
   constructor() {
