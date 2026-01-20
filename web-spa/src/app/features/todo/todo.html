@@ -1,0 +1,41 @@
+<div class="mt-20 flex items-center justify-center bg-background px-4 pb-20 md:px-0">
+  <hlm-card class="w-full max-w-md">
+    <hlm-card-header>
+      <hlm-card-title>Todos</hlm-card-title>
+    </hlm-card-header>
+    <hlm-card-content class="space-y-4">
+      <input hlmInput placeholder="Add a new todo" (keydown.enter)="handleAdd($event)" />
+      <ul class="space-y-2">
+        @for (todo of todoService.todos(); track todo.id) {
+          <li class="flex items-center gap-3 rounded-md border p-2">
+            <hlm-checkbox
+              [checked]="todo.done"
+              (checkedChange)="todoService.toggle(todo.id)"
+              class="cursor-pointer"
+            />
+            <span
+              class="flex-1 text-sm"
+              [class.line-through]="todo.done"
+              [class.text-muted-foreground]="todo.done"
+            >
+              {{ todo.text }}
+            </span>
+            <button
+              hlmBtn
+              variant="ghost"
+              size="icon"
+              class="cursor-pointer"
+              (click)="todoService.remove(todo.id)"
+            >
+              ✕
+            </button>
+          </li>
+        }
+      </ul>
+    </hlm-card-content>
+    <hlm-card-footer class="flex justify-between text-sm text-muted-foreground">
+      <span>Total: {{ todoService.todos().length }}</span>
+      <span>Completed: {{ todoService.completed().length }}</span>
+    </hlm-card-footer>
+  </hlm-card>
+</div>
