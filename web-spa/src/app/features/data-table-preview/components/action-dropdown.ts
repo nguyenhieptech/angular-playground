@@ -5,7 +5,7 @@ import { injectFlexRenderContext, type CellContext } from "@tanstack/angular-tab
 import { HlmButtonImports } from "@/shared/ui/button";
 import { HlmDropdownMenuImports } from "@/shared/ui/dropdown-menu";
 import { HlmIconImports } from "@/shared/ui/icon";
-import type { Payment } from "./data-table-preview.page";
+import type { Payment } from "../data-table-preview";
 
 @Component({
   selector: "spartan-action-dropdown",
