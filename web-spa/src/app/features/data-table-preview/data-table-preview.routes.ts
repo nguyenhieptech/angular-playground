@@ -1,9 +1,9 @@
 import { Routes } from "@angular/router";
-import { DataTablePreviewPage } from "./data-table-preview.page";
+import { DataTablePreview } from "./data-table-preview";
 
 export const dataTablePreviewRoutes: Routes = [
   {
     path: "",
-    component: DataTablePreviewPage,
+    component: DataTablePreview,
   },
 ];

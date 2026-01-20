@@ -6,7 +6,7 @@ export interface Todo {
   done: boolean;
 }
 
-export class TodoStore {
+export class TodoService {
   private _todos = signal<Todo[]>([]);
 
   todos = this._todos.asReadonly();

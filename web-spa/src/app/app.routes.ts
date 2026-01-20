@@ -19,4 +19,9 @@ export const routes: Routes = [
     path: "todo",
     loadChildren: () => import("@/features/todo/todo.routes").then((m) => m.todoRoutes),
   },
+  {
+    path: "counter",
+    loadComponent: () =>
+      import("@/features/counter/counter").then((m) => m.CounterComponent),
+  },
 ];
