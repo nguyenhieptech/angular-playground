@@ -1,0 +1,9 @@
+<div class="flex flex-col items-center justify-center">
+  <h1 class="text-2xl font-bold">Counter: {{ counter() }}</h1>
+  <div class="mt-6 flex flex-col gap-4">
+    <button hlmBtn (click)="increment()">Increment</button>
+    <button hlmBtn (click)="decrement()">Decrement</button>
+    <button hlmBtn variant="outline" (click)="reset()">Reset</button>
+    <button hlmBtn variant="outline" (click)="resetTo(10)">Reset to 10</button>
+  </div>
+</div>
