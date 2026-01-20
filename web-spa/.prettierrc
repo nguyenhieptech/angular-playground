@@ -8,9 +8,10 @@
   "bracketSameLine": false,
   "tabWidth": 2,
   "printWidth": 90,
-  "tailwindFunctions": ["clsx", "cva", "hlm", "classes"],
-  "tailwindStylesheet": "./src/styles.css",
   "tailwindAttributes": ["hlm", "classes"],
+  "tailwindFunctions": ["clsx", "cva", "hlm", "classes"],
+  "tailwindCSS.classAttributes": ["class", "classes"],
+  "tailwindStylesheet": "./src/styles.css",
   "plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
   "overrides": [
     {
